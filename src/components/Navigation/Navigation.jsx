@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import styles from "./navigation.module.css"; // Import CSS module
+import styles from "./navigation.module.css";
+import Logo from "../Logo/Logo";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,8 @@ const Navigation = () => {
 
   return (
     <nav className={styles.navigation}>
+      <Logo />
+
       <div
         className={styles.burgerMenu}
         onClick={toggleMenu}
