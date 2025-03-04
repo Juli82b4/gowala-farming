@@ -26,9 +26,7 @@ const SponsorsSection = () => {
       >
         {sponsors.map((sponsor, index) => (
           <SwiperSlide key={index}>
-            <div>
-              <img src={sponsor.imgSrc} alt={`Sponsor ${index + 1}`} />
-            </div>
+            <img className={styles.sliderImage} src={sponsor.imgSrc} alt={`Sponsor ${index + 1}`} />
           </SwiperSlide>
         ))}
       </Swiper>
