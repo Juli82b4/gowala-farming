@@ -33,9 +33,8 @@ span {
   font-size: 30px;
   font-weight: normal;
   gap: 10px;
-  
 }
 
 .cardSection span {
-    font-weight: bold;
-  }
+  font-weight: bold;
+}
