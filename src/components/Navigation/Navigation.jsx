@@ -24,16 +24,34 @@ const Navigation = () => {
       </div>
       <ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
         <li>
-          <a href="#home">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="/shop">Shop</a>
         </li>
         <li>
-          <a href="#services">Services</a>
+          <a href="/contact">Contact</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="/services">Services</a>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+        <li>
+          <a href="/checkout">Checkout</a>
+        </li>
+        <li>
+          <a href="/backoffice">Backoffice</a>
+        </li>
+        <li>
+          <a href="/backoffice/products">Products</a>
+        </li>
+        <li>
+          <a href="/backoffice/orders">Orders</a>
+        </li>
+        <li>
+          <a href="/backoffice/messages">Messages</a>
         </li>
       </ul>
     </nav>
