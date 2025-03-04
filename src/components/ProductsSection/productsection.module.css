@@ -9,8 +9,12 @@
 }
 
 .header h1 {
-  font-size: 2em;
+  font-size: 40px;
   margin: 0;
+  font-weight: 600;
+}
+.header p {
+  font-size: 16px;
 }
 
 .viewAllButton {
@@ -31,8 +35,8 @@
 }
 
 .header span {
-  font-size: 1.2em;
-  color: #666;
+  font-size: 36px;
+  color: #000000;
 }
 
 .products {
@@ -82,4 +86,19 @@
 .product p {
   font-size: 1em;
   color: #333;
+}
+.addToCartButton {
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #5e9a13;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 300;
+}
+
+.cartIcon {
+  margin-right: 12px;
 }

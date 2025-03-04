@@ -12,31 +12,32 @@ export const EmployeeSection = () => {
   return (
     <div className={styles.employeeSection}>
       <div className={styles.header}>
-        <h1>Vores medarbejdere</h1>
-        <span>Vi har udvalgt de bedste medarbejdere</span>
+        <h1>Vores hold</h1>
+        <span>
+          2000+ ansatte <br /> siden 1975
+        </span>
         <p>
-          Her finder du et udvalg af vores dedikerede medarbejdere fra Gowala
-          Farms.
+          De ansatte på Gowala Farms er passionerede fagfolk, der med omsorg og
+          ekspertise sikrer sunde dyr og produkter af højeste kvalitet.
         </p>
       </div>
 
       <div className={styles.employees}>
         {displayedEmployees.length > 0 ? (
-          displayedEmployees.map((employee) => (
-            <div key={employee._id} className={styles.employee}>
+          displayedEmployees.map((employee, index) => (
+            <div key={employee._id} className={styles.employeeCard}>
               <div className={styles.employeeImageWrapper}>
                 <img
                   src={employee.image}
                   alt={employee.name}
                   className={styles.employeeImage}
                 />
-              </div>
-
-              <div className={styles.employeeDetails}>
-                <h2>{employee.name}</h2>
-                <p className={styles.employeeDescription}>
-                  {employee.position}
-                </p>
+                <div className={styles.employeeOverlay}>
+                  {index === 0 ? (
+                    <p className={styles.employeeText}>{employee.text}</p>
+                  ) : null}
+                  <h2 className={styles.employeeName}>{employee.name}</h2>
+                </div>
               </div>
             </div>
           ))

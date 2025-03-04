@@ -23,25 +23,28 @@
 
 .text-container h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 .text-container h2 {
   margin: 4px;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .center-button {
   position: relative;
   z-index: 10;
   margin-top: 3em;
-  padding: 1em 3em;
-  font-size: 15px;
+  padding: 0.7em 3em;
+  font-size: 20px;
+  font-weight: 500;
   background-color: #5e9a13;
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .swiper-container {
@@ -53,10 +56,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: #5e9a13;
-  font-size: 10px bold;
+  
 }
