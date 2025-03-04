@@ -13,6 +13,23 @@
   margin: 0;
 }
 
+.viewAllButton {
+  background-color: #5e9a13;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .header span {
   font-size: 1.2em;
   color: #666;

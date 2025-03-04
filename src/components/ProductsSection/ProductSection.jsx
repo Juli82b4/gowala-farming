@@ -12,8 +12,12 @@ export const ProductSection = () => {
   return (
     <div className={styles.productSection}>
       <div className={styles.header}>
-        <h1>Our Products</h1>
-        <span>Check out our products</span>
+        <h1>Vores produkter</h1>
+        <span>Vi har udvalgt de bedste produkter</span>
+        <p>
+          Her finder du et udvalg af friske mejeriprodukter og kvalitetskød fra
+          Gowala Farms - direkte fra gården til dit bord.
+        </p>
       </div>
 
       <div className={styles.products}>
@@ -38,8 +42,12 @@ export const ProductSection = () => {
             </div>
           ))
         ) : (
-          <div className={styles.noProducts}>No products available</div>
+          <div className={styles.noProducts}>Ingen produkter tilgængelig</div>
         )}
+      </div>
+
+      <div className={styles.buttonWrapper}>
+        <button className={styles.viewAllButton}>Se alle produkter</button>
       </div>
     </div>
   );
