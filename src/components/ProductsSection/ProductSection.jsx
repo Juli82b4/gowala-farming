@@ -4,6 +4,7 @@ import useProducts from "../../hooks/useProducts";
 
 export const ProductSection = () => {
   const { products, loading, error } = useProducts();
+  const displayedProducts = products.slice(0, 5);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -16,14 +17,17 @@ export const ProductSection = () => {
       </div>
 
       <div className={styles.products}>
-        {products.length > 0 ? (
-          products.map((product) => (
+        {displayedProducts.length > 0 ? (
+          displayedProducts.map((product) => (
             <div key={product._id} className={styles.product}>
-              <img
-                src={product.image}
-                alt={product.title}
-                className={styles.productImage}
-              />
+              <div className={styles.productImageWrapper}>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className={styles.productImage}
+                />
+              </div>
+
               <div className={styles.productDetails}>
                 <h2>{product.title}</h2>
                 <p className={styles.productDescription}>
