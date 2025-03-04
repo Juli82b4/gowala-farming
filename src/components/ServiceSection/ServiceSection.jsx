@@ -5,8 +5,9 @@ const ServiceSection = () => {
   return (
     <>
       <div className={styles.cardSection}>
-        <h1>Den førende mælkproducent </h1>
-        <span>Sund og nærende mælk siden 1975</span>
+        <div className= {styles.cardHeading}></div>
+        <h1>Den førende <br/>mælkproducent </h1>
+        <span>Sund og nærende <br/>mælk siden 1975</span>
 
         <div className={styles.cards}>
           <div className={styles.cardOne}>

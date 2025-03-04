@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./productsection.module.css";
 import useProducts from "../../hooks/useProducts";
+import { FaShoppingCart } from "react-icons/fa"; // Import the shopping cart icon
 
 export const ProductSection = () => {
   const { products, loading, error } = useProducts();
@@ -38,6 +39,10 @@ export const ProductSection = () => {
                   {product.description}
                 </p>
                 <h3>{product.price.toFixed(2)},-</h3>
+                <button className={styles.addToCartButton}>
+                  <FaShoppingCart className={styles.cartIcon} />
+                  Tilføj til kurv
+                </button>
               </div>
             </div>
           ))

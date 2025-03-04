@@ -1,39 +1,74 @@
-
 .employeeSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #f9f9f9;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+.header {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header span {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.employees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .employeeCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 5px solid #f8f8f8;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.employeeCard img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.employeeImageWrapper {
+  width: 100%;
+  height: 100%;
 }
 
-.employeeCard h3 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #333;
+.employeeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.employeeCard p {
-    margin: 5px 0;
-    font-size: 0.9em;
-    color: #666;
+.employeeOverlay {
+  position: absolute;
+  bottom: 40px;
+  background: rgba(255, 255, 255, 0.774);
+  padding: 17px;
+  text-align: center;
+  margin: 20px;
+  width: calc(100% - 40px - 34px);
+}
+
+.employeeText {
+  font-size: 1rem;
+  color: #333;
+}
+
+.employeeName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px;
 }

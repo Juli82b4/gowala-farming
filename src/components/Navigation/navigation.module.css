@@ -7,6 +7,11 @@
   color: white;
 }
 
+.menuIcons {
+  display: flex;
+  align-items: center;
+}
+
 .burgerMenu {
   display: none;
   flex-direction: column;
@@ -15,7 +20,7 @@
 
 .burgerMenu .bar {
   width: 25px;
-  height: 3px;
+  height: 4px;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -45,6 +50,13 @@
 
 .navLinks a:hover {
   color: #ff6347;
+}
+
+.cartIcon {
+  margin-left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #5E9A13; /* Change the color to green */
 }
 
 @media (max-width: 768px) {

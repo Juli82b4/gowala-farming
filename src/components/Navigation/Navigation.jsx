@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./navigation.module.css";
 import Logo from "../Logo/Logo";
+import { FaShoppingBag } from "react-icons/fa"; // Import the shopping bag icon
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,15 +14,19 @@ const Navigation = () => {
     <nav className={styles.navigation}>
       <Logo />
 
-      <div
-        className={styles.burgerMenu}
-        onClick={toggleMenu}
-        aria-expanded={isOpen}
-      >
-        <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
-        <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
-        <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
+      <div className={styles.menuIcons}>
+        <div
+          className={styles.burgerMenu}
+          onClick={toggleMenu}
+          aria-expanded={isOpen}
+        >
+          <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
+          <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
+          <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
+        </div>
+        <FaShoppingBag className={styles.cartIcon} /> {/* Add the shopping bag icon */}
       </div>
+
       <ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
         <li>
           <a href="/">Home</a>
