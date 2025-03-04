@@ -5,6 +5,7 @@ import HeroSlider from "./components/HeroSlider/HeroSlider";
 import ServiceSection from "./components/ServiceSection/ServiceSection";
 import ProductSection from "./components/ProductsSection/ProductSection";
 import EmployeeSection from "./components/EmployeeSection/EmployeeSection";
+import NewsletterSection from "./components/NewsletterSection/NewsletterSection";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <ServiceSection />
       <ProductSection />
       <EmployeeSection />
+      <NewsletterSection />
     </>
   );
 }
