@@ -17,9 +17,10 @@ export const ProductSection = () => {
 
       <div className={styles.products}>
         {products.map((product) => (
-          <div key={product.id} className={styles.product}>
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
+          <div key={product._id} className={styles.product}>
+            <img src={product.image} alt={product.title} />
+            <h2>{product.title}</h2>
+            <h3>${product.price}</h3>
           </div>
         ))}
       </div>
