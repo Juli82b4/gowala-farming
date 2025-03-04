@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 import HeroSlider from "./components/HeroSlider/HeroSlider";
+import ServiceSection from "./components/ServiceSection/ServiceSection";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,6 +11,7 @@ function App() {
     <>
       <Navigation />
       <HeroSlider />
+      <ServiceSection />
     </>
   );
 }
