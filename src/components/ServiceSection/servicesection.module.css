@@ -1,0 +1,41 @@
+.cardSection {
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  border: 1px solid #8f404005;
+}
+
+.cardOne,
+.cardTwo,
+.cardThree {
+  margin: 1em;
+  background-color: #00000005;
+  border: 1px solid #00000005;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  font-weight: bold;
+}
+
+.card p {
+  font-size: small;
+}
+
+.cardSection h1,
+span {
+  font-size: 30px;
+  font-weight: normal;
+  gap: 10px;
+  
+}
+
+.cardSection span {
+    font-weight: bold;
+  }
