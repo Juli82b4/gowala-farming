@@ -25,13 +25,16 @@
 }
 
 .product {
-  background-color: #fff;
+  background-color: #eff4f8;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   margin: 10px;
-  width: 200px;
+  width: 90%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .productImageWrapper {
@@ -43,6 +46,15 @@
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+}
+
+.productDetails {
+  text-align: center;
+}
+
+.productDetails h3 {
+  color: #5e9a13;
+  font-size: 1.5rem;
 }
 
 .product h2 {

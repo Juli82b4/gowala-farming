@@ -33,7 +33,7 @@ export const ProductSection = () => {
                 <p className={styles.productDescription}>
                   {product.description}
                 </p>
-                <h3>${product.price.toFixed(2)}</h3>
+                <h3>{product.price.toFixed(2)},-</h3>
               </div>
             </div>
           ))
