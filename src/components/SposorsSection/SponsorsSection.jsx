@@ -1,9 +1,37 @@
-import React from 'react'
+import React from "react";
+import styles from "./sponsorsection.module.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const SponsorsSection = () => {
-  return (
-    <div>SponsorsSection</div>
-  )
-}
+  const sponsors = [
+    { imgSrc: "src/assets/sponsors/01.png" },
+    { imgSrc: "src/assets/sponsors/02.png" },
+    { imgSrc: "src/assets/sponsors/03.png" },
+    { imgSrc: "src/assets/sponsors/04.png" },
+  ];
 
-export default SponsorsSection
+  return (
+    <div className={styles.sponsorsSection}>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={50}
+        slidesPerView={2}
+        navigation={true}
+        pagination={{ clickable: true }}
+        loop={true}
+      >
+        {sponsors.map((sponsor, index) => (
+          <SwiperSlide key={index}>
+            <img className={styles.sliderImage} src={sponsor.imgSrc} alt={`Sponsor ${index + 1}`} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+};
+
+export default SponsorsSection;
