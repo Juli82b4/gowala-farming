@@ -1,18 +1,18 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules'; 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import './HeroSlider.css';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./HeroSlider.css";
 
 const HeroSlider = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination]} 
+      modules={[Navigation, Pagination]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation={true} 
+      navigation={true}
       pagination={{ clickable: true }}
       loop={true}
     >
