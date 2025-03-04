@@ -5,7 +5,9 @@ import styles from "./logo.module.css";
 const Logo = () => {
   return (
     <div className={styles.logo}>
-      <img src={logo} alt="Gowala Farms Logo" />
+      <a href="/">
+        <img src={logo} alt="Gowala Farms Logo" />
+      </a>
     </div>
   );
 };
