@@ -7,6 +7,7 @@ import ProductSection from "./components/ProductsSection/ProductSection";
 import EmployeeSection from "./components/EmployeeSection/EmployeeSection";
 import NewsletterSection from "./components/NewsletterSection/NewsletterSection";
 import SponsorsSection from "./components/SposorsSection/SponsorsSection";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
       <EmployeeSection />
       <NewsletterSection />
       <SponsorsSection />
+      <Footer />
     </>
   );
 }
