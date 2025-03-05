@@ -1,0 +1,77 @@
+.articlesSection {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sectionHeading {
+  font-size: 2em;
+  color: #333;
+}
+
+.sectionSubtext {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.article {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.articleImageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.articleImage {
+  width: 100%;
+  height: auto;
+}
+
+.articleDetails {
+  padding: 10px;
+}
+
+.articleDescription {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.articleList {
+  list-style-type: none;
+  padding-left: 20px;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 2rem;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #5e9a13;
+  margin: 1rem;
+}
+
+.noArticles {
+  text-align: center;
+  color: #555;
+}

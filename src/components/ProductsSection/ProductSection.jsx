@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./productsection.module.css";
 import useProducts from "../../hooks/useProducts";
-import { FaShoppingCart } from "react-icons/fa"; // Import the shopping cart icon
+import { FaShoppingCart } from "react-icons/fa";
 
 export const ProductSection = ({
   productHeading,

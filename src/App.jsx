@@ -3,7 +3,7 @@ import "./App.css";
 import MainPage from "./Pages/MainPage";
 import { useRoutes } from "react-router-dom";
 import ProductsPage from "./Pages/ProductsPage";
-import ServiceArticlePage from "./Pages/ServiceArticlePage";
+import ServiceArticlePage from "./Pages/ServicesPage";
 
 function App() {
   const routes = useRoutes([
