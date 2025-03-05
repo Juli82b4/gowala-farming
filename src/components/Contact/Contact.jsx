@@ -34,29 +34,23 @@ const ContactSection = () => {
           <div>
             <FaPhone />
             <small>
-              +88130-589-745-6987
-              <br />+ 1655-456-532
+              +88130-589-745-6987 <br />
+              +1655-456-532
             </small>
-            <br />
-            <br />
           </div>
           <div>
             <FaClock />
             <small>
-              Man-Fre 09:00 - 18:00 <br />
-              (undtagen helligdage)
+              Mon-Fri 09:00 - 18:00 <br />
+              (except public holidays)
             </small>
-            <br />
-            <br />
           </div>
           <div>
             <FaMapMarkerAlt />
             <small>
-              Mejerigade 14 <br />
-              Mejeby
+              25/2 Lane2 Vokte Street Building <br />
+              Melborn City
             </small>
-            <br />
-            <br />
           </div>
         </div>
       </div>

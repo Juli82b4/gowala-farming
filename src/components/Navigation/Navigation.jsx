@@ -28,6 +28,9 @@ const Navigation = () => {
       </div>
 
       <ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
+      <li>
+          <a href="/forside">forside</a>
+        </li>
         <li>
           <a href="/shop">Shop</a>
         </li>

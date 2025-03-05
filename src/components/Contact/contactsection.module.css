@@ -7,14 +7,10 @@
   box-sizing: border-box;
 }
 
-.footerIcons div {
-  display: block;
-}
-
 .footerIcons svg {
   color: green;
-  font-size: 30px;
-  display: inline-block;
+  font-size: 30px; 
+
 }
 
 .footerIcons small {
@@ -23,6 +19,9 @@
   text-align: center;
   line-height: 1.5;
   display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
 
 .contactForm {
