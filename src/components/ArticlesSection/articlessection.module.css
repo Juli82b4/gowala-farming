@@ -1,5 +1,5 @@
 .articlesSection {
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .header {
@@ -24,9 +24,9 @@
 }
 
 .article {
-  width: 300px;
+  width: 100%;
   margin: 10px;
-  border: 1px solid #ddd;
+ 
   border-radius: 5px;
   overflow: hidden;
   text-align: center;

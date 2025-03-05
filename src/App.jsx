@@ -6,6 +6,8 @@ import ProductsPage from "./Pages/ProductsPage";
 import ServiceArticlePage from "./Pages/ServicesPage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
+import CheckoutPage from "./Pages/CheckoutPage";
+import SubscribePage from "./Pages/SubscribePage";
 
 function App() {
   const routes = useRoutes([
@@ -14,6 +16,8 @@ function App() {
     { path: "/services", element: <ServiceArticlePage /> },
     { path: "/about", element: <AboutPage /> },
     { path: "/contact", element: <ContactPage /> },
+    { path: "/checkout", element: <CheckoutPage/>},
+    { path: "/subscribe", element: <SubscribePage/>},
   ]);
   return (
     <div className="app">

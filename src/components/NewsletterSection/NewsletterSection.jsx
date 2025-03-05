@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import styles from "./NewsletterSection.module.css";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate(); // Initialize navigation
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted email:", email);
+    navigate("/subscribe"); // Redirect to SubscribePage
   };
 
   return (
@@ -17,7 +20,7 @@ const NewsletterSection = () => {
           <p>Få nyhederne fra gården på din mail.</p>
         </h2>
         <small>
-          Tilmeld dig vores nyhedesbrev - så kan du altid følgle med i, hvad der
+          Tilmeld dig vores nyhedesbrev - så kan du altid følge med i, hvad der
           sker på farmen.
         </small>
       </div>
