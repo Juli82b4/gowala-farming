@@ -6,25 +6,24 @@ import ArticlesSection from "../components/ArticlesSection/ArticlesSection";
 import "../index.css";
 import SponsorsSection from "../components/SposorsSection/SponsorsSection";
 import ServiceSection from "../components/ServiceSection/ServiceSection";
-import AboutSection from "../components/About/AboutSection";
+import EmployeeSection from "../components/EmployeeSection/EmployeeSection";
+import ContactSection from "../components/Contact/Contact";
 
-const AboutPage = () => {
+const ContactPage = () => {
   return (
     <>
       <Navigation />
       <HeaderHeading
-        headingtext="Gowala tilbyder"
-        subtext="Hvad vi tilbyder vores forbrugere"
+        headingtext="Kontakt Gowala"
+        subtext="Vores kontaktinformationer"
       />
-      <ArticlesSection fetchByTitle="Om Gowala Farms" />
 
-      <AboutSection />
+      <ContactSection />
 
-      <SponsorsSection />
-      <ServiceSection />
+      <EmployeeSection />
       <Footer />
     </>
   );
 };
 
-export default AboutPage;
+export default ContactPage;
