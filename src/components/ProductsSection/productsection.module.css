@@ -5,7 +5,6 @@
 
 .header {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .header h1 {
@@ -101,4 +100,18 @@
 
 .cartIcon {
   margin-right: 12px;
+}
+
+.productHeading {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.subheading {
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.productsubtext {
+  font-size: 20px;
 }
