@@ -2,20 +2,23 @@ import React from "react";
 import styles from "./articlessection.module.css";
 import useServiceArticles from "../../hooks/useServiceArticles";
 
-const ArticlesSection = ({ sectionHeading, sectionSubtext }) => {
+const ArticlesSection = ({ fetchByTitle = null }) => {
   const { articles, loading, error } = useServiceArticles();
-  const displayedArticles = articles.slice(0, 3);
+
+  let displayedArticles = [];
+  if (fetchByTitle) {
+    displayedArticles = articles.filter(
+      (article) => article.title === fetchByTitle
+    );
+  } else {
+    displayedArticles = articles.slice(0, 3);
+  }
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div className={styles.articlesSection}>
-      <div className={styles.header}>
-        <h1 className={styles.sectionHeading}>{sectionHeading}</h1>
-        <p className={styles.sectionSubtext}>{sectionSubtext}</p>
-      </div>
-
       <div className={styles.articles}>
         {displayedArticles.length > 0 ? (
           displayedArticles.map((article) => (
