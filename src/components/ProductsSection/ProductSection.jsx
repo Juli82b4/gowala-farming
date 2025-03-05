@@ -3,7 +3,11 @@ import styles from "./productsection.module.css";
 import useProducts from "../../hooks/useProducts";
 import { FaShoppingCart } from "react-icons/fa"; // Import the shopping cart icon
 
-export const ProductSection = () => {
+export const ProductSection = ({
+  productHeading,
+  subheading,
+  productsubtext,
+}) => {
   const { products, loading, error } = useProducts();
   const displayedProducts = products.slice(0, 5);
 
@@ -13,12 +17,9 @@ export const ProductSection = () => {
   return (
     <div className={styles.productSection}>
       <div className={styles.header}>
-        <h1>Vores produkter</h1>
-        <span>Vi har udvalgt de bedste produkter</span>
-        <p>
-          Her finder du et udvalg af friske mejeriprodukter og kvalitetskød fra
-          Gowala Farms - direkte fra gården til dit bord.
-        </p>
+        <h1 className={styles.productHeading}>{productHeading}</h1>
+        <h2 className={styles.subheading}>{subheading}</h2>
+        <p className={styles.productsubtext}>{productsubtext}</p>
       </div>
 
       <div className={styles.products}>

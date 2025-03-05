@@ -1,0 +1,21 @@
+.headerHeading {
+  background-image: url(../../assets/page_header_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.headingtext {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.subtext {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: green;
+  }

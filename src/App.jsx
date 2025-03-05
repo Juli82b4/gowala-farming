@@ -7,7 +7,7 @@ import ProductsPage from "./Pages/ProductsPage";
 function App() {
   const routes = useRoutes([
     { path: "/", element: <MainPage /> },
-    { path: "/products", element: <ProductsPage /> },
+    { path: "/shop", element: <ProductsPage /> },
   ]);
   return (
     <div className="app">
