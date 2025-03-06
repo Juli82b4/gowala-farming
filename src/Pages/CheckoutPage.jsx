@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation/Navigation";
 import HeaderHeading from "../components/HeaderHeading/HeaderHeading";
 import Footer from "../components/Footer/Footer";
 import OrderSection from "../components/OrderSection/OrderSection";
+import styles from "../components/OrderSection/ordersection.module.css"; 
 
 const CheckoutPage = () => {
   return (
@@ -11,6 +12,8 @@ const CheckoutPage = () => {
       <HeaderHeading
         headingtext="Gowala shopping"
         subtext="Færdiggør din bestilling"
+        headingClass={styles.headingText} 
+        subtextClass={styles.subText} 
       />
 
       <div>

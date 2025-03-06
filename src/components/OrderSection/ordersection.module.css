@@ -1,0 +1,114 @@
+.orderSection {
+  padding: 30px;
+  margin: 20px;
+  background-color: #eff4f8;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.itemImageContainer {
+  margin-right: 10px;
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 6em;
+}
+
+.itemName {
+  font-weight: bold;
+}
+
+.itemPrice {
+  color: #888;
+}
+
+.itemControls {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.incrementButton,
+.decrementButton {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+.total {
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.totalBox {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: right;
+  font-size: 12px;
+}
+
+.checkoutSection {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.emailInput {
+  padding: 10px;
+  margin-right: 10px;
+  width: calc(100% - 130px);
+}
+
+.checkoutButton {
+  padding: 10px 20px;
+}
+
+.itemControls button {
+  border-radius: 8em;
+}
+
+.total span {
+  color: green;
+  font-size: 18px;
+  margin: 8px;
+}
+
+.totalBox h2 {
+  color: black;
+}
+
+.totalBox span {
+  color: green;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.checkoutSection input {
+  color: black;
+  font-size: 15px;
+  padding: 10px 4em;
+}
+
+.checkoutSection {
+  background-color: #eff4f8;
+  border: none;
+}
+
+.checkoutSection button {
+  padding: 10px 5em;
+  font-size: 15px;
+}
+
+div {
+  text-align: center;
+  font-size: 24px;
+}
