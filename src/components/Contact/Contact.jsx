@@ -10,16 +10,16 @@ const ContactSection = () => {
           <h2>Send en besked til os</h2>
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <label htmlFor="name"></label>
+          <input type="text" id="name" name="name" placeholder="Dit navn" required />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <label htmlFor="email"></label>
+          <input type="email" id="email" name="email" placeholder="Din email" required />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <label htmlFor="message"></label>
+          <textarea id="message" name="message" placeholder="Din besked" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>

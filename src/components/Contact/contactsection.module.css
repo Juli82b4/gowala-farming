@@ -5,7 +5,12 @@
   padding: 20px;
   max-width: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
+
+
+
 
 .footerIcons svg {
   color: green;
@@ -23,15 +28,26 @@
   text-align: left;
 }
 
+.footerIcons div {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.footerIcons div small {
+  margin-left: 10px;
+}
+
 .contactForm {
   display: flex;
   flex-direction: column;
   padding: 20px;
   box-sizing: border-box;
+  background-color: #e1edf363;
 }
 
 .formGroupHeading {
-  text-align: center;
+  text-align: center;            
   font-size: 1rem;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -51,9 +67,12 @@
 .formGroup textarea {
   width: 100%;
   padding: 10px;
+  font-family: "frank";
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 20px;
+  color: black;
 }
 
 button {
@@ -67,4 +86,33 @@ button {
 
 button:hover {
   background-color: #5e9a13;
+}
+
+
+.contactInfo {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .contactSection {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contactForm {
+    width: 48%;
+  }
+
+  .contactInfo {
+    width: 48%;
+  }
+
+
+  .contactInfo{
+    text-align: left;
+  }
+
+  .footerIcons div small{
+    text-align: left;
+  }
 }
