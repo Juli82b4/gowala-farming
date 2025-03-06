@@ -6,14 +6,8 @@ const ServiceSection = () => {
     <>
       <div className={styles.cardSection}>
         <div className={styles.cardHeading}>
-          <h1>
-            Den førende <br />
-            mælkproducent{" "}
-          </h1>
-          <p>
-            Sund og nærende <br />
-            mælk siden 1975
-          </p>
+          <h1>Den førende mælkproducent</h1>
+          <p>Sund og nærende  mælk siden 1975</p>
         </div>
         <div className={styles.cards}>
           <div className={styles.cardOne}>
