@@ -16,7 +16,7 @@ const ProductsPage = () => {
         productHeading="Alle vores produkter"
         subheading="Alt på ét sted"
         productsubtext="Her på siden finder du alle vores friske mejeriprodukter og kvalitetskød fra Gowala Farms – direkte fra gården til dit bord."
-        displayAllProducts={true} // Pass the prop to display all products
+        displayAllProducts={true}
       />
       <Footer />
     </>

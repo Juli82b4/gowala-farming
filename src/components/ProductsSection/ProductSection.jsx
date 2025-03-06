@@ -32,11 +32,9 @@ export const ProductSection = ({
 
   return (
     <div className={styles.productSection}>
-      <div className={styles.header}>
-        <h1 className={styles.productHeading}>{productHeading}</h1>
-        <h2 className={styles.subheading}>{subheading}</h2>
-        <p className={styles.productsubtext}>{productsubtext}</p>
-      </div>
+      <h1 className={styles.productHeading}>{productHeading}</h1>
+      <h2 className={styles.subheading}>{subheading}</h2>
+      <p className={styles.productsubtext}>{productsubtext}</p>
 
       <div className={styles.products}>
         {displayedProducts.length > 0 ? (
@@ -72,7 +70,9 @@ export const ProductSection = ({
       </div>
 
       <div className={styles.buttonWrapper}>
-        <a href="/shop" className={styles.button}>Se alle produkter</a>
+        <a href="/shop" className={styles.button}>
+          Se alle produkter
+        </a>
       </div>
     </div>
   );

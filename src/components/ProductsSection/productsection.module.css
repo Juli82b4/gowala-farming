@@ -2,16 +2,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  padding: 10px;
 }
-
+ 
 .product {
   box-sizing: border-box;
   background-color: #b8d2e55e;
   padding: 20px;
   border: 5px solid #f8f8f8;
-
   margin: 8px;
-  padding: 10px;
+  padding: 50px;
 }
 
 .productImageWrapper {
@@ -33,14 +33,26 @@
   margin: 2rem;
 }
 
-.button {
-  padding: 10px 15px;
+.product button {
+  padding: 20px 35px;
   background-color: #5e9a13;
   color: white;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.productHeading {
+  font-size: 36px;
+}
+
+.subheading {
+  font-weight: 100;
+}
+.productsubtext {
+  font-weight: 100;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
