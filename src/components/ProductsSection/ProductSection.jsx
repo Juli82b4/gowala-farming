@@ -72,7 +72,7 @@ export const ProductSection = ({
       </div>
 
       <div className={styles.buttonWrapper}>
-        <button className={styles.viewAllButton}>Se alle produkter</button>
+        <a href="/shop" className={styles.button}>Se alle produkter</a>
       </div>
     </div>
   );

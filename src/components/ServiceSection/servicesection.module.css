@@ -63,45 +63,19 @@ span {
 
   .cards {
     flex-direction: row;
+    flex-wrap: wrap;
   }
   
   .cardOne,
-  .cardTwo,
-  .cardThree {
+  .cardTwo {
     flex: 1;
     margin: 0 10px;
   }
-}
 
-@media (min-width: 769px) {
-  .cardHeading h1 {
-    display: inline;
-    margin-right: 10px;
-    white-space: normal;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cards {
-    display: flex;
-    justify-content: space-between;
-  }
-  .cardOne,
-  .cardTwo,
   .cardThree {
-    flex: 1;
-    margin: 0 10px;
-  }
-  .cardSection {
-    padding: 2em;
-  }
-  .cardHeading {
-    font-size: 36px;
-  }
-  .card h2 {
-    font-size: 24px;
-  }
-  .card p {
-    font-size: medium;
+    flex-basis: 100%;
+    margin-top: 20px;
+    justify-content: center;
   }
 }
+
