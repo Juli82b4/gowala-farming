@@ -1,25 +1,34 @@
 import React, { useState } from "react";
 import useProducts from "../../hooks/useProducts";
-import styles from "./backoffice.module.css"; // Import the CSS module
+import styles from "./backoffice.module.css";
 
 const Backoffice = () => {
   const { products, createProduct, updateProduct, deleteProduct } =
     useProducts();
-  const [newProduct, setNewProduct] = useState({
+  const [productForm, setProductForm] = useState({
     title: "",
     price: 0,
     discount: 0,
     image: "",
   });
+  const [isEditing, setIsEditing] = useState(false);
+  const [editProductId, setEditProductId] = useState(null);
 
-  const handleCreate = () => {
-    createProduct(newProduct);
-    setNewProduct({ title: "", price: 0, discount: 0, image: "" });
+  const handleCreateOrUpdate = () => {
+    if (isEditing) {
+      updateProduct(editProductId, productForm);
+    } else {
+      createProduct(productForm);
+    }
+    setProductForm({ title: "", price: 0, discount: 0, image: "" });
+    setIsEditing(false);
+    setEditProductId(null);
   };
 
-  const handleUpdate = (id) => {
-    const updatedProduct = products.find((product) => product._id === id);
-    updateProduct(id, updatedProduct);
+  const handleEdit = (product) => {
+    setProductForm(product);
+    setIsEditing(true);
+    setEditProductId(product._id);
   };
 
   const handleDelete = (id) => {
@@ -33,26 +42,29 @@ const Backoffice = () => {
         <input
           type="text"
           placeholder="Title"
-          value={newProduct.title}
+          value={productForm.title}
           onChange={(e) =>
-            setNewProduct({ ...newProduct, title: e.target.value })
+            setProductForm({ ...productForm, title: e.target.value })
           }
         />
         <input
           type="number"
           placeholder="Price"
-          value={newProduct.price}
+          value={productForm.price}
           onChange={(e) =>
-            setNewProduct({ ...newProduct, price: parseFloat(e.target.value) })
+            setProductForm({
+              ...productForm,
+              price: parseFloat(e.target.value),
+            })
           }
         />
         <input
           type="number"
           placeholder="Discount"
-          value={newProduct.discount}
+          value={productForm.discount}
           onChange={(e) =>
-            setNewProduct({
-              ...newProduct,
+            setProductForm({
+              ...productForm,
               discount: parseFloat(e.target.value),
             })
           }
@@ -60,12 +72,14 @@ const Backoffice = () => {
         <input
           type="text"
           placeholder="Image URL"
-          value={newProduct.image}
+          value={productForm.image}
           onChange={(e) =>
-            setNewProduct({ ...newProduct, image: e.target.value })
+            setProductForm({ ...productForm, image: e.target.value })
           }
         />
-        <button onClick={handleCreate}>Create Product</button>
+        <button onClick={handleCreateOrUpdate}>
+          {isEditing ? "Update Product" : "Create Product"}
+        </button>
       </div>
       <div className={styles.productList}>
         <table>
@@ -88,9 +102,7 @@ const Backoffice = () => {
                   <img src={product.image} alt={product.title} width="50" />
                 </td>
                 <td>
-                  <button onClick={() => handleUpdate(product._id)}>
-                    Update
-                  </button>
+                  <button onClick={() => handleEdit(product)}>Edit</button>
                   <button onClick={() => handleDelete(product._id)}>
                     Delete
                   </button>

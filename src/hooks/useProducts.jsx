@@ -29,14 +29,18 @@ const useProducts = () => {
   }, []);
 
   const createProduct = async (newProduct) => {
+    const formData = new FormData();
+    Object.keys(newProduct).forEach((key) => {
+      formData.append(key, newProduct[key]);
+    });
+
     try {
       const response = await fetch("http://localhost:3042/products", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(newProduct),
+        body: formData,
       });
       if (!response.ok) {
         throw new Error("Failed to create product");
@@ -50,14 +54,19 @@ const useProducts = () => {
   };
 
   const updateProduct = async (id, updatedProduct) => {
+    const formData = new FormData();
+    Object.keys(updatedProduct).forEach((key) => {
+      formData.append(key, updatedProduct[key]);
+    });
+    formData.append("id", id);
+
     try {
-      const response = await fetch(`http://localhost:3042/products/${id}`, {
+      const response = await fetch(`http://localhost:3042/product`, {
         method: "PUT",
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(updatedProduct),
+        body: formData,
       });
       if (!response.ok) {
         throw new Error("Failed to update product");
