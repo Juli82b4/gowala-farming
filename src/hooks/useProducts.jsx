@@ -26,7 +26,75 @@ const useProducts = () => {
     fetchProducts();
   }, []);
 
-  return { products, loading, error };
+  const createProduct = async (newProduct) => {
+    try {
+      const response = await fetch("http://localhost:3042/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to create product");
+      }
+
+      const createdProduct = await response.json();
+      setProducts((prevProducts) => [...prevProducts, createdProduct.data]);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const updateProduct = async (id, updatedProduct) => {
+    try {
+      const response = await fetch(`http://localhost:3042/products/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to update product");
+      }
+
+      const updatedData = await response.json();
+      setProducts((prevProducts) =>
+        prevProducts.map((product) =>
+          product._id === id ? updatedData.data : product
+        )
+      );
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const deleteProduct = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:3042/products/${id}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) {
+        throw new Error("Failed to delete product");
+      }
+
+      setProducts((prevProducts) =>
+        prevProducts.filter((product) => product._id !== id)
+      );
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  return {
+    products,
+    loading,
+    error,
+    createProduct,
+    updateProduct,
+    deleteProduct,
+  };
 };
 
 export default useProducts;

@@ -11,6 +11,7 @@ import CheckoutPage from "./Pages/CheckoutPage";
 import SubscribePage from "./Pages/SubscribePage";
 import ProtectedRoute from "./components/login/ProtectedRoute";
 import { useAuthContext } from "./context/useAuthContext";
+import Backoffice from "./components/Backoffice/BackofficeSection";
 
 function App() {
   const { signedIn } = useAuthContext();
@@ -25,7 +26,11 @@ function App() {
     { path: "/login", element: <Login /> },
     {
       path: "/backoffice",
-      element: <ProtectedRoute isAllowed={signedIn}>asdasd</ProtectedRoute>,
+      element: (
+        <ProtectedRoute isAllowed={signedIn}>
+          <Backoffice />
+        </ProtectedRoute>
+      ),
       children: [
         {
           path: "reviews",
