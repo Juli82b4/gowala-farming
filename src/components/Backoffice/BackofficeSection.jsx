@@ -82,7 +82,7 @@ const Backoffice = () => {
             {products.map((product) => (
               <tr key={product._id}>
                 <td>{product.title}</td>
-                <td>${product.price}</td>
+                <td>{product.price},-</td>
                 <td>{product.discount}%</td>
                 <td>
                   <img src={product.image} alt={product.title} width="50" />

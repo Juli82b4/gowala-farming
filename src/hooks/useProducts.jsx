@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const useProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { token } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -32,6 +34,7 @@ const useProducts = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(newProduct),
       });
@@ -52,6 +55,7 @@ const useProducts = () => {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(updatedProduct),
       });
@@ -72,8 +76,11 @@ const useProducts = () => {
 
   const deleteProduct = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3042/products/${id}`, {
+      const response = await fetch(`http://localhost:3042/product/${id}`, {
         method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
       if (!response.ok) {
         throw new Error("Failed to delete product");
