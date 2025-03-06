@@ -11,6 +11,22 @@ export const ProductSection = ({
   const { products, loading, error } = useProducts();
   const displayedProducts = products.slice(0, 5);
 
+  const addToCart = (product) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingProductIndex = cart.findIndex(
+      (item) => item._id === product._id
+    );
+
+    if (existingProductIndex !== -1) {
+      cart[existingProductIndex].count += 1;
+    } else {
+      product.count = 1;
+      cart.push(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  };
+
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
@@ -40,7 +56,10 @@ export const ProductSection = ({
                   {product.description}
                 </p>
                 <h3>{product.price.toFixed(2)},-</h3>
-                <button className={styles.addToCartButton}>
+                <button
+                  className={styles.addToCartButton}
+                  onClick={() => addToCart(product)}
+                >
                   <FaShoppingCart className={styles.cartIcon} />
                   Tilføj til kurv
                 </button>
