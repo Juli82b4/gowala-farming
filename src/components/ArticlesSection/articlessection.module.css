@@ -38,7 +38,7 @@
 }
 
 .articleImageWrapper {
-  width: 50vw;
+  width: 50%;
   overflow: hidden;
   position: relative;
   display: inline-block;
@@ -81,4 +81,19 @@ input[type="checkbox"] {
 .noArticles {
   text-align: center;
   color: #555;
+}
+
+@media (max-width: 768px) {
+  .article {
+    flex-direction: column;
+  }
+
+  .article:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .articleImageWrapper,
+  .articleDetails {
+    width: 100%;
+  }
 }
