@@ -13,7 +13,6 @@ const useServiceArticles = () => {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        
         setArticles(data.data);
       } catch (error) {
         setError(error.message);

@@ -5,14 +5,9 @@ import useServiceArticles from "../../hooks/useServiceArticles";
 const ArticlesSection = ({ fetchByTitle = null }) => {
   const { articles, loading, error } = useServiceArticles();
 
-  let displayedArticles = [];
-  if (fetchByTitle) {
-    displayedArticles = articles.filter(
-      (article) => article.title === fetchByTitle
-    );
-  } else {
-    displayedArticles = articles.slice(0, 3);
-  }
+  const displayedArticles = fetchByTitle
+    ? articles.filter((article) => article.title === fetchByTitle)
+    : articles.slice(0, 3);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -30,7 +25,6 @@ const ArticlesSection = ({ fetchByTitle = null }) => {
                   className={styles.articleImage}
                 />
               </div>
-
               <div className={styles.articleDetails}>
                 <h2>{article.title}</h2>
                 <p className={styles.articleDescription}>

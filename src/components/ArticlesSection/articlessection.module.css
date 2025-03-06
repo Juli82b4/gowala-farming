@@ -24,20 +24,25 @@
 }
 
 .article {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
   margin: 10px;
- 
   border-radius: 5px;
   overflow: hidden;
   text-align: center;
   position: relative;
 }
 
+.article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .articleImageWrapper {
-  width: 100%;
-  height: 200px;
+  width: 50vw;
   overflow: hidden;
   position: relative;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .articleImage {
@@ -46,7 +51,9 @@
 }
 
 .articleDetails {
+  width: 50%;
   padding: 10px;
+  text-align: left;
 }
 
 .articleDescription {
