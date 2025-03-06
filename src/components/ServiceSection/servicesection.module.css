@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   padding: 1em;
-  border: 1px solid #8f404005;
+  border: 1px solid rgba(143, 64, 0, 0.02);
 }
 
 .cardHeading {
@@ -20,25 +20,33 @@
 
 .card {
   margin: 1em;
-  background-color: #00000005;
-  border: 1px solid #00000005;
+  background-color: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.02);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
   padding: 2em;
+  text-align: left;
+  max-width: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
 }
 
 .card h2 {
   font-weight: bold;
+  font-size: 24px;
 }
 
 .card p {
   font-size: small;
+  color: #555;
 }
 
-.cardSection h1,
-.cardSection span {
+.cardSection h1 {
   font-size: 30px;
   font-weight: normal;
-  gap: 10px;
 }
 
 .cardSection span {
@@ -73,3 +81,14 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .desktopHeading,
+  .desktopSubtext {
+    display: block;
+  }
+
+  .mobileHeading,
+  .mobileSubtext {
+    display: none;
+  }
+}
