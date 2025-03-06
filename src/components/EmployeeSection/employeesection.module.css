@@ -1,8 +1,8 @@
 .employeeSection {
   text-align: center;
-  padding: 40px 20px;
+  padding: 10px 20px;
   background-color: #f8f8f8;
-  background-image:url(../../assets/blob_02.jpg);
+  background-image: url(../../assets/blob_02.jpg);
 }
 
 .header {
@@ -11,7 +11,7 @@
 }
 
 .header h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -24,19 +24,14 @@
   font-size: 1rem;
   color: #666;
   margin-top: 10px;
+  font-weight: 100;
 }
 
 .employees {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr); 
-  gap: 40px;
-}
-
-@media (max-width: 768px) {
-  .employees {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .employeeCard {

@@ -14,7 +14,7 @@ export const EmployeeSection = () => {
       <div className={styles.header}>
         <h1>Vores hold</h1>
         <span>
-          2000+ ansatte <br /> siden 1975
+          2000+ ansatte siden 1975
         </span>
         <p>
           De ansatte på Gowala Farms er passionerede fagfolk, der med omsorg og
