@@ -56,11 +56,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: #5e9a13;
-  
+}
+
+@media (min-width: 769px) {
+  .hero-slide img {
+    background-size: contain;
+  }
+
+  .hero-slide {
+    height: 50vh;
+  }
 }

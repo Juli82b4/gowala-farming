@@ -5,10 +5,16 @@ const ServiceSection = () => {
   return (
     <>
       <div className={styles.cardSection}>
-        <div className= {styles.cardHeading}></div>
-        <h1>Den førende <br/>mælkproducent </h1>
-        <span>Sund og nærende <br/>mælk siden 1975</span>
-
+        <div className={styles.cardHeading}>
+          <h1>
+            Den førende <br />
+            mælkproducent{" "}
+          </h1>
+          <p>
+            Sund og nærende <br />
+            mælk siden 1975
+          </p>
+        </div>
         <div className={styles.cards}>
           <div className={styles.cardOne}>
             <img src="src/assets/cards/01.png" alt="card-pic" />

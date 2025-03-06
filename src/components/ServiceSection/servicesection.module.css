@@ -9,7 +9,6 @@
   flex-direction: column;
   padding: 1em;
   border: 1px solid #8f404005;
-  
 }
 
 .cardHeading {
@@ -45,4 +44,28 @@ span {
 
 .cardSection span {
   font-weight: bold;
+}
+
+.desktopHeading,
+.desktopSubtext {
+  display: none;
+}
+
+.mobileHeading,
+.mobileSubtext {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .cardHeading h1 {
+    white-space: normal;
+  }
+}
+
+@media (min-width: 769px) {
+  .cardHeading h1 {
+    display: inline;
+    margin-right: 10px;
+    white-space: normal;
+  }
 }

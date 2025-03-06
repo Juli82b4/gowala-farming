@@ -24,13 +24,10 @@ const Navigation = () => {
           <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
           <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
         </div>
-        <FaShoppingBag className={styles.cartIcon} /> 
+        <FaShoppingBag className={styles.cartIcon} />
       </div>
 
       <ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
-      <li>
-          <a href="/forside">forside</a>
-        </li>
         <li>
           <a href="/shop">Shop</a>
         </li>

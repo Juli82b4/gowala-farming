@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color: #EFF4F8;
+  background-color: #eff4f8;
   color: white;
 }
 
@@ -28,7 +28,7 @@
 .bar {
   width: 25px;
   height: 3px;
-  background-color: #5E9A13;
+  background-color: #5e9a13;
   margin: 4px 0;
   transition: 0.4s;
 }
@@ -56,7 +56,17 @@
   margin-left: 20px;
   font-size: 24px;
   cursor: pointer;
-  color: #5E9A13; /* Change the color to green */
+  color: #5e9a13;
+}
+
+@media (min-width: 769px) {
+  .menuIcons {
+    order: 1;
+  }
+
+  .cartIcon {
+    order: 2;
+  }
 }
 
 @media (max-width: 768px) {
