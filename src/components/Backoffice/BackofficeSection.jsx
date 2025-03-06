@@ -39,44 +39,56 @@ const Backoffice = () => {
     <div className={styles.backoffice}>
       <h1>Product Management</h1>
       <div className={styles.productForm}>
-        <input
-          type="text"
-          placeholder="Title"
-          value={productForm.title}
-          onChange={(e) =>
-            setProductForm({ ...productForm, title: e.target.value })
-          }
-        />
-        <input
-          type="number"
-          placeholder="Price"
-          value={productForm.price}
-          onChange={(e) =>
-            setProductForm({
-              ...productForm,
-              price: parseFloat(e.target.value),
-            })
-          }
-        />
-        <input
-          type="number"
-          placeholder="Discount"
-          value={productForm.discount}
-          onChange={(e) =>
-            setProductForm({
-              ...productForm,
-              discount: parseFloat(e.target.value),
-            })
-          }
-        />
-        <input
-          type="text"
-          placeholder="Image URL"
-          value={productForm.image}
-          onChange={(e) =>
-            setProductForm({ ...productForm, image: e.target.value })
-          }
-        />
+        <label>
+          Title:
+          <input
+            type="text"
+            placeholder="Title"
+            value={productForm.title}
+            onChange={(e) =>
+              setProductForm({ ...productForm, title: e.target.value })
+            }
+          />
+        </label>
+        <label>
+          Price:
+          <input
+            type="number"
+            placeholder="Price"
+            value={productForm.price}
+            onChange={(e) =>
+              setProductForm({
+                ...productForm,
+                price: parseFloat(e.target.value),
+              })
+            }
+          />
+        </label>
+        <label>
+          Discount:
+          <input
+            type="number"
+            placeholder="Discount"
+            value={productForm.discount}
+            onChange={(e) =>
+              setProductForm({
+                ...productForm,
+                discount: parseFloat(e.target.value),
+              })
+            }
+          />
+        </label>
+        <label>
+          Image URL:
+          <input
+            type="text"
+            placeholder="Image URL"
+            value={productForm.image}
+            onChange={(e) =>
+              setProductForm({ ...productForm, image: e.target.value })
+            }
+          />
+        </label>
         <button onClick={handleCreateOrUpdate}>
           {isEditing ? "Update Product" : "Create Product"}
         </button>

@@ -35,7 +35,7 @@ const useProducts = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:3042/products", {
+      const response = await fetch("http://localhost:3042/product", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
