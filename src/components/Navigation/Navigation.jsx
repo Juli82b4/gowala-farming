@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./navigation.module.css";
 import Logo from "../Logo/Logo";
 import { FaShoppingBag } from "react-icons/fa"; // Import the shopping bag icon
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalCount = storedCart.reduce((acc, item) => acc + item.count, 0);
+    setCartCount(totalCount);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -24,7 +31,14 @@ const Navigation = () => {
           <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
           <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}></div>
         </div>
-        <FaShoppingBag className={styles.cartIcon} />
+        <div className={styles.cartContainer}>
+          <a href="/checkout">
+            <FaShoppingBag className={styles.cartIcon} />
+            {cartCount > 0 && (
+              <span className={styles.cartCount}>{cartCount}</span>
+            )}
+          </a>
+        </div>
       </div>
 
       <ul className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
