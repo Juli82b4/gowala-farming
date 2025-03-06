@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Login from "./components/login/Login";
 import MainPage from "./Pages/MainPage";
 import { useRoutes } from "react-router-dom";
 import ProductsPage from "./Pages/ProductsPage";
@@ -16,8 +17,9 @@ function App() {
     { path: "/services", element: <ServiceArticlePage /> },
     { path: "/about", element: <AboutPage /> },
     { path: "/contact", element: <ContactPage /> },
-    { path: "/checkout", element: <CheckoutPage/>},
-    { path: "/subscribe", element: <SubscribePage/>},
+    { path: "/checkout", element: <CheckoutPage /> },
+    { path: "/subscribe", element: <SubscribePage /> },
+    { path: "/login", element: <Login /> },
   ]);
   return (
     <div className="app">
