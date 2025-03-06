@@ -7,8 +7,9 @@ import dairyToConsumerImg from "../../assets/cards/03.png";
 const ServiceSection = () => {
   return (
     <div className={styles.cardSection}>
+      <div className={styles.cardtext}>
       <h1 className={styles.cardHeading}>Den førende mælkproducent</h1>
-      <p>Sund og nærende mælk siden 1975</p>
+      <p>Sund og nærende mælk siden 1975</p></div>
 
       <div className={styles.cards}>
         <div className={styles.card}>

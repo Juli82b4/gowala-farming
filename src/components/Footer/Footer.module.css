@@ -6,7 +6,7 @@
     min-height: 100vh; 
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     position: relative;
 
   }
@@ -27,19 +27,23 @@
 }
 
 .footerIcons div {
-  display: block;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 1em;
 }
 
 .footerIcons svg {
   color: green;
   font-size: 30px;
   display: inline-block;
+  margin-right: 10px;
 }
 
 .footerIcons small {
   gap: 10px;
   margin: 10px;
-  text-align: center;
+  text-align: left;
   line-height: 1.5;
   display: inline-block;
 }
@@ -63,4 +67,3 @@
     font-weight: bold;
     font-size: 0.9em;
   }
-  

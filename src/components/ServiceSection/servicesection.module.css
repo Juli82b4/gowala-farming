@@ -1,23 +1,23 @@
-.cardSection {
-  text-align: center;
-  padding: 2em 1em;
-}
-
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1em;
   border: 1px solid rgba(143, 64, 0, 0.02);
 }
 
-.cardHeading {
-  font-size: 32px;
-  font-weight: bold;
-  margin: 2em 0;
+.cardtext{
+  margin-top: 2em;
 }
 
+h2{
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-weight: 600;
+}
 .card {
   margin: 1em;
   background-color: rgba(0, 0, 0, 0.02);
