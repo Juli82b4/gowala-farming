@@ -2,12 +2,13 @@
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 15px;
   max-width: 400px;
   margin: 0 auto;
   background-image: url(../../assets/blob_01.jpg);
   background-position: cover;
   height: 666px;
+  padding: 30px;
 }
 
 .newsletterContent {

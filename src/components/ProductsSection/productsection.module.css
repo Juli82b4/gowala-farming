@@ -7,8 +7,9 @@
 .product {
   box-sizing: border-box;
   background-color: #b8d2e55e;
-  padding: 16px;
-  border: 5px solid rgb(229, 238, 240);
+  padding: 20px;
+  border: 5px solid #f8f8f8;
+
   margin: 8px;
   padding: 10px;
 }
