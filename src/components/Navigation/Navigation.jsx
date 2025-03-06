@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./navigation.module.css";
 import Logo from "../Logo/Logo";
-import { FaShoppingBag } from "react-icons/fa"; // Import the shopping bag icon
+import { FaShoppingBag } from "react-icons/fa";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
