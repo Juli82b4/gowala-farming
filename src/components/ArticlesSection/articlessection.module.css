@@ -25,7 +25,7 @@
 
 .article {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin: 10px;
   border-radius: 5px;
   overflow: hidden;
@@ -34,7 +34,7 @@
 }
 
 .article:nth-child(even) {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .articleImageWrapper {
