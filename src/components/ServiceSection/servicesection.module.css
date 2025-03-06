@@ -1,5 +1,6 @@
 .cardSection {
   text-align: center;
+  padding: 2em 1em;
 }
 
 .cards {
@@ -14,12 +15,10 @@
 .cardHeading {
   font-size: 32px;
   font-weight: bold;
-  margin: 2em;
+  margin: 2em 0;
 }
 
-.cardOne,
-.cardTwo,
-.cardThree {
+.card {
   margin: 1em;
   background-color: #00000005;
   border: 1px solid #00000005;
@@ -36,7 +35,7 @@
 }
 
 .cardSection h1,
-span {
+.cardSection span {
   font-size: 30px;
   font-weight: normal;
   gap: 10px;
@@ -57,22 +56,17 @@ span {
 }
 
 @media (min-width: 768px) {
-  .cardHeading h1 {
-    white-space: normal;
-  }
-
   .cards {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
-  .cardOne,
-  .cardTwo {
+
+  .card {
     flex: 1;
     margin: 0 10px;
   }
 
-  .cardThree {
+  .card:nth-child(3) {
     flex-basis: 100%;
     margin-top: 20px;
     justify-content: center;
