@@ -2,19 +2,26 @@
   padding-top: 20px;
 }
 
+.articlesSection h2{
+  text-align: left;
+}
 .header {
-  text-align: center;
+  text-align: left; 
   margin-bottom: 20px;
 }
 
 .sectionHeading {
   font-size: 2em;
   color: #333;
+  font-weight: normal; 
+  text-align: left; 
 }
 
 .sectionSubtext {
   font-size: 1.2em;
   color: #666;
+  font-weight: normal; 
+  text-align: left; 
 }
 
 .articles {
@@ -29,7 +36,7 @@
   margin: 10px;
   border-radius: 5px;
   overflow: hidden;
-  text-align: center;
+  text-align: left; 
   position: relative;
 }
 
@@ -59,12 +66,14 @@
 .articleDescription {
   font-size: 0.9em;
   color: #555;
+  font-weight: normal; 
+  text-align: left; 
 }
 
 .articleList {
   list-style-type: none;
-  padding-left: 20px;
-  text-align: left;
+  padding-left: 0; 
+  text-align: left; 
 }
 
 li {
@@ -79,7 +88,7 @@ input[type="checkbox"] {
 }
 
 .noArticles {
-  text-align: center;
+  text-align: left; 
   color: #555;
 }
 
