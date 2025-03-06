@@ -74,3 +74,39 @@
 .productList img {
   max-width: 50px;
 }
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.edit {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+button.delete {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+button.create {
+  background-color: #008CBA; /* Blue */
+  color: white;
+}

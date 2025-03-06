@@ -91,7 +91,7 @@ const Backoffice = () => {
             }
           />
         </label>
-        <button onClick={handleCreateOrUpdate}>
+        <button className={isEditing ? styles.update : styles.create} onClick={handleCreateOrUpdate}>
           {isEditing ? "Update Product" : "Create Product"}
         </button>
       </div>
@@ -116,8 +116,8 @@ const Backoffice = () => {
                   <img src={product.image} alt={product.title} width="50" />
                 </td>
                 <td>
-                  <button onClick={() => handleEdit(product)}>Edit</button>
-                  <button onClick={() => handleDelete(product._id)}>Delete</button>
+                  <button className={styles.edit} onClick={() => handleEdit(product)}>Edit</button>
+                  <button className={styles.delete} onClick={() => handleDelete(product._id)}>Delete</button>
                 </td>
               </tr>
             ))}
