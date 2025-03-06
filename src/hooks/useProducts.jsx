@@ -28,6 +28,7 @@ const useProducts = () => {
     fetchProducts();
   }, []);
 
+  // Function to create a new product
   const createProduct = async (newProduct) => {
     const formData = new FormData();
     Object.keys(newProduct).forEach((key) => {
@@ -53,6 +54,7 @@ const useProducts = () => {
     }
   };
 
+  // Function to update an existing product
   const updateProduct = async (id, updatedProduct) => {
     const formData = new FormData();
     Object.keys(updatedProduct).forEach((key) => {
@@ -83,6 +85,7 @@ const useProducts = () => {
     }
   };
 
+  // Function to delete a product
   const deleteProduct = async (id) => {
     try {
       const response = await fetch(`http://localhost:3042/product/${id}`, {

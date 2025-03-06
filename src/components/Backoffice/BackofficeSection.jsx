@@ -3,8 +3,7 @@ import useProducts from "../../hooks/useProducts";
 import styles from "./backoffice.module.css";
 
 const Backoffice = () => {
-  const { products, createProduct, updateProduct, deleteProduct } =
-    useProducts();
+  const { products, createProduct, updateProduct, deleteProduct } = useProducts();
   const [productForm, setProductForm] = useState({
     title: "",
     price: 0,
@@ -14,6 +13,7 @@ const Backoffice = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editProductId, setEditProductId] = useState(null);
 
+  // Handle create or update product
   const handleCreateOrUpdate = () => {
     if (isEditing) {
       updateProduct(editProductId, productForm);
@@ -25,12 +25,14 @@ const Backoffice = () => {
     setEditProductId(null);
   };
 
+  // Handle edit product
   const handleEdit = (product) => {
     setProductForm(product);
     setIsEditing(true);
     setEditProductId(product._id);
   };
 
+  // Handle delete product
   const handleDelete = (id) => {
     deleteProduct(id);
   };
@@ -115,9 +117,7 @@ const Backoffice = () => {
                 </td>
                 <td>
                   <button onClick={() => handleEdit(product)}>Edit</button>
-                  <button onClick={() => handleDelete(product._id)}>
-                    Delete
-                  </button>
+                  <button onClick={() => handleDelete(product._id)}>Delete</button>
                 </td>
               </tr>
             ))}
