@@ -57,6 +57,9 @@ const Navigation = () => {
         <li>
           <a href="/checkout">Checkout</a>
         </li>
+        <li>
+          <a href="/login">Login</a>
+        </li>
       </ul>
     </nav>
   );
