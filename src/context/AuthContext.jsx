@@ -69,7 +69,7 @@ export const AuthContextProvider = ({ children }) => {
 
     saveAuth({ token: result.data.token });
     setUser(user);
-    navigate("/");
+    navigate("/backoffice");
 
     return user;
   };
