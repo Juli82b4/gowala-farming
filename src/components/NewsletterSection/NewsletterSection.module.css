@@ -95,3 +95,13 @@
   color: #5e9a13;
   font-size: 16px
 }
+
+@media (min-width: 1024px) {
+ 
+
+  .newsletterSection {
+    max-width: 100%;
+  }
+  
+
+}
