@@ -1,34 +1,55 @@
-import React from "react";
-import styles from "./productsection.module.css";
-import useProducts from "../../hooks/useProducts";
-import { FaShoppingCart } from "react-icons/fa";
+import React from "react"; 
+import styles from "./productsection.module.css"; 
+import useProducts from "../../hooks/useProducts"; 
+import { FaShoppingCart } from "react-icons/fa"; 
 
 export const ProductSection = ({
-  productHeading,
-  subheading,
-  productsubtext,
+  productHeading, // Product section heading passed in as a prop
+  subheading, // Subheading for the section passed as a prop
+  productsubtext, // Subtext for the product section passed as a prop
 }) => {
-  const { products, loading, error } = useProducts();
-  const displayedProducts = products.slice(0, 5);
+  
+  // Using the 'useProducts' custom hook to fetch the product data, loading state, and any error if occurs
+  const { products, loading, error } = useProducts(); 
 
+  // Slice the products array to only display the first 5 products
+  const displayedProducts = products.slice(0, 5); 
+  // Slice ensures that no more than 5 products are shown in this section
+
+  // Defining the function to handle adding a product to the cart
   const addToCart = (product) => {
+    // Get the current cart from localStorage or initialize it as an empty array if not present
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if the product already exists in the cart based on its unique _id
     const existingProductIndex = cart.findIndex(
       (item) => item._id === product._id
     );
 
+    // If the product is found in the cart (existingProductIndex is not -1)
     if (existingProductIndex !== -1) {
-      cart[existingProductIndex].count += 1;
+      // Increase the count of the existing product in the cart
+      cart[existingProductIndex].count += 1; 
     } else {
-      product.count = 1;
-      cart.push(product);
+      // If the product is not found, set the initial count to 1 and add it to the cart
+      product.count = 1; 
+      cart.push(product); // Push the product into the cart
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    // Save the updated cart back into the localStorage
+    localStorage.setItem("cart", JSON.stringify(cart)); 
+    // 'localStorage' stores the cart data persistently in the browser
   };
 
+  // Check if the products are still loading, and if so, render a loading message
   if (loading) return <div>Loading...</div>;
+
+  // Check if there's an error while fetching products, and if so, display the error message
   if (error) return <div>Error: {error}</div>;
+
+  // The actual JSX code (rendering) will be in the return statement below
+
+
 
   return (
     <div className={styles.productSection}>
