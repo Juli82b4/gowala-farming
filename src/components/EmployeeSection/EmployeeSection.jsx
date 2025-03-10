@@ -1,12 +1,24 @@
+// Import React library for building UI components
 import React from "react";
+
+// Import CSS module for styling
 import styles from "./employeesection.module.css";
+
+// Import custom hook to fetch employee data
 import useEmployees from "../../hooks/useEmployees";
 
+// Define EmployeeSection component
 export const EmployeeSection = () => {
+  // Retrieve employees, loading state, and error state from the custom hook
   const { employees, loading, error } = useEmployees();
+
+  // Slice the employees array to display only the first 5 employees
   const displayedEmployees = employees.slice(0, 5);
 
+  // Display a loading message while data is being fetched
   if (loading) return <div>Loading...</div>;
+
+  // Display an error message if fetching data fails
   if (error) return <div>Error: {error}</div>;
 
   return (
