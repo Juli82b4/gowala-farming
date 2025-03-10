@@ -1,35 +1,46 @@
+
 import React, { useState, useEffect } from "react";
 import styles from "./ordersection.module.css";
 
+// Define the OrderSection component
 const OrderSection = () => {
+  // State to store cart items, initialized as an empty array
   const [cart, setCart] = useState([]);
 
+  // Load cart data from localStorage when the component mounts
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(storedCart);
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || []; // Retrieve cart data from localStorage, or set to empty array if null
+    setCart(storedCart); // Update state with retrieved cart data
   }, []);
 
+  // Function to update the cart state and persist it in localStorage
   const updateCart = (updatedCart) => {
-    setCart(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    setCart(updatedCart); // Update the cart state
+    localStorage.setItem("cart", JSON.stringify(updatedCart)); // Save updated cart to localStorage
   };
 
+  // Function to increase item count in the cart
   const incrementCount = (index) => {
-    const updatedCart = [...cart];
-    updatedCart[index].count += 1;
-    updateCart(updatedCart);
+    const updatedCart = [...cart]; // Create a copy of the cart array
+    updatedCart[index].count += 1; // Increase the count of the selected item
+    updateCart(updatedCart); // Update cart state and localStorage
   };
 
+  // Function to decrease item count or remove item if count is zero
   const decrementCount = (index) => {
-    const updatedCart = [...cart];
-    updatedCart[index].count -= 1;
+    const updatedCart = [...cart]; // Create a copy of the cart array
+    updatedCart[index].count -= 1; // Decrease the count of the selected item
+
+    // Remove item from cart if count is below zero
     if (updatedCart[index].count < 0) {
-      updatedCart.splice(index, 1);
+      updatedCart.splice(index, 1); // Remove the item from the cart array
     }
-    updateCart(updatedCart);
+
+    updateCart(updatedCart); // Update cart state and localStorage
   };
 
-  const total = cart.reduce((acc, item) => acc + item.count * item.price, 0);
+  // Calculate the total cost of the cart
+  const total = cart.reduce((acc, item) => acc + item.count * item.price, 0); // Multiply item count by price and sum up
 
   return (
     <div className={styles.orderSection}>
